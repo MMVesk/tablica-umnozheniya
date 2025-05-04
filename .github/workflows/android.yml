@@ -2,7 +2,8 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -16,7 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install system dependencies
+      - name: Install system deps
         run: |
           apt-get update
           apt-get install -y git zip openjdk-8-jdk
@@ -39,6 +40,7 @@ jobs:
         with:
           name: Таблица-умножения-debug
           path: bin/*.apk
+
 
 
 
