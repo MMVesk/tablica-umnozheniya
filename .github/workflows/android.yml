@@ -27,8 +27,8 @@ jobs:
         run: ls -lh bin/
 
       - name: Upload APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          name: Таблица-умножения-debug
+          name: apk
           path: bin/*.apk
 
